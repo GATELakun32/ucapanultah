@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun! 🎂✨</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Popup Awal -->
+    <div id="namePopup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-sparkles">✨✨✨</div>
+            <p class="popup-text">Halo... kamu lagi ulang tahun ya? 🎉✨</p>
+            <p class="popup-subtext">Boleh tulis nama kamu dulu ya…</p>
+            <input type="text" id="nameInput" placeholder="Masukkan nama kamu..." autocomplete="off">
+            <button id="continueBtn" class="btn-continue">Lanjut ✨</button>
+        </div>
+    </div>
+
+    <!-- Background Canvas untuk Konfeti -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Sparkles Background -->
+    <div class="sparkles-container"></div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="main-content hidden">
+        <!-- Balon -->
+        <div class="balloons">
+            <div class="balloon balloon1">🎈</div>
+            <div class="balloon balloon2">🎈</div>
+            <div class="balloon balloon3">🎈</div>
+            <div class="balloon balloon4">🎈</div>
+            <div class="balloon balloon5">🎈</div>
+        </div>
+
+
+        <!-- Container Utama -->
+        <div class="container">
+            <!-- Pesan Ucapan -->
+            <h1 id="birthdayMessage" class="birthday-message">Selamat Ulang Tahun! 🎀✨</h1>
+            
+            <!-- Kue dengan Lilin -->
+            <div class="cake-container">
+                <div class="cake">
+                    <!-- Lapisan atas -->
+                    <div class="cake-layer cake-top">
+                        <div class="frosting"></div>
+                    </div>
+                    <!-- Lapisan tengah -->
+                    <div class="cake-layer cake-middle">
+                        <div class="frosting"></div>
+                    </div>
+                    <!-- Lapisan bawah -->
+                    <div class="cake-layer cake-bottom">
+                        <div class="frosting"></div>
+                    </div>
+                    
+                    <!-- Dekorasi -->
+                    <div class="cake-decoration">🎀</div>
+                    <div class="cake-decoration decoration-right">✨</div>
+                    
+                    <!-- Lilin -->
+                    <div class="candles">
+                        <div class="candle candle-1">
+                            <div class="candle-wick"></div>
+                            <div class="flame flame-1" id="flame1"></div>
+                        </div>
+                        <div class="candle candle-2">
+                            <div class="candle-wick"></div>
+                            <div class="flame flame-2" id="flame2"></div>
+                        </div>
+                        <div class="candle candle-3">
+                            <div class="candle-wick"></div>
+                            <div class="flame flame-3" id="flame3"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Emoji Angin untuk Animasi Tiup -->
+                    <div id="windEmojis" class="wind-emojis hidden">
+                        <div class="wind-emoji wind-emoji-1">💨</div>
+                        <div class="wind-emoji wind-emoji-2">💨</div>
+                        <div class="wind-emoji wind-emoji-3">💨</div>
+                    </div>
+                    
+                    <!-- Asap saat mati -->
+                    <div class="smoke smoke-1"></div>
+                    <div class="smoke smoke-2"></div>
+                    <div class="smoke smoke-3"></div>
+                </div>
+            </div>
+
+            <!-- Container Tombol -->
+            <div class="button-container">
+                <!-- Tombol Tiup Lilin -->
+                <button id="blowBtn" class="btn-blow">
+                    Tiup Lilinnya 🎂✨
+                </button>
+
+                <!-- Tombol Buka Hadiah -->
+                <button id="giftBtn" class="btn-gift hidden">
+                    Buka Hadiah 🎁
+                </button>
+            </div>
+
+            <!-- Reminder Popup -->
+            <div id="reminderPopup" class="reminder-popup hidden">
+                <div class="reminder-content">
+                    <div class="reminder-sparkles">✨✨✨</div>
+                    <p class="reminder-message">ketika sudah baca hadiah nya jangan lupa ss lalu kirim ke aku yaaa</p>
+                    <button id="continueGiftBtn" class="btn-continue-gift">Oke, Lanjut! 💕</button>
+                </div>
+            </div>
+
+            <!-- Gift Popup -->
+            <div id="giftPopup" class="gift-popup hidden">
+                <div class="gift-content">
+                    <div class="gift-sparkles">✨✨✨</div>
+                    <h2 id="giftTitle">Hadiah Untuk Kamu! 🎁💝</h2>
+ sayang!  hari ini penuh kebahagiaan, dan momen                    <p id="giftMessage" class="gift-message">Selamat ulang tahun indah yang tak terlupakan. Semoga semua impianmu tercapai! dan panjag umur yaa 🌟💖✨</p>
+                    <button id="closeGiftBtn" class="btn-close-gift">Tutup 💕</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
